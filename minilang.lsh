@@ -22,7 +22,7 @@ pub fn minilang() {
                 else if /"/ { yield string; break; }
                 await input;
             }
-        } else if /(?:var|func|if|else|while|return|break|require|from|in)\>/ {
+        } else if /(?:var|func|if|else|while|return|break|native|require|from|in)\>/ {
             yield keyword.control;
         } else if /(?:println|print)\>/ {
             yield keyword.other;
