@@ -26,9 +26,7 @@ pub fn minilang() {
             yield keyword.control;
         } else if /(?:println|print)\>/ {
             yield keyword.other;
-        } else if /(?:true|false|nil)\>/ {
-            yield constant.language;
-        } else if /-?(?:0x[\da-fA-F_]+|\d[\d_]*)/ {
+        } else if /-?\d[\d_]*/ {
             yield constant.numeric;
         } else if /(\w+)\s*\(/ {
             yield $1 as method;
